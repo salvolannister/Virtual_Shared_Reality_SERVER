@@ -1,0 +1,217 @@
+﻿@page
+<div class="container">
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 1px;
+            margin-top: 10px;
+        }
+
+            .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+            }
+
+            .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+            }
+
+            .tg .tg-t0np {
+                font-family: "Comic Sans MS", cursive, sans-serif !important;
+                ;
+                text-align: left;
+                vertical-align: top
+            }
+
+            .tg .tg-0lax {
+                text-align: left;
+                vertical-align: top;
+            }
+
+            .tg .check {
+                text-align: left;
+                vertical-align: top;
+            }
+
+                .tg .check input {
+                    margin: auto;
+                    display: block;
+                }
+
+            .tg .tg-0lax img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.unstyledTable {
+            border-top: 10px;
+        }
+
+        .divTable.unstyledTable .divTableCell, .divTable.unstyledTable .divTableHead {
+            padding: 3px 4px;
+            border-top: 10px;
+        }
+
+        .divTable.unstyledTable .divTableHeading {
+            background: #DDDDDD;
+        }
+
+            .divTable.unstyledTable .divTableHeading .divTableHead {
+                font-weight: normal;
+            }
+
+        .unstyledTable .tableFootStyle {
+            font-weight: bold;
+        }
+        /* DivTable.com */
+        .divTable {
+            display: table;
+        }
+
+        .divTableRow {
+            display: table-row;
+        }
+
+        .divTableHeading {
+            display: table-header-group;
+        }
+
+        .divTableCell, .divTableHead {
+            display: table-cell;
+        }
+
+        .divTableCell .doneMsg{
+            opacity: 0.1;
+        }
+        .divTableHeading {
+            display: table-header-group;
+        }
+
+        .divTableFoot {
+            display: table-footer-group;
+        }
+
+        .divTableBody {
+            display: table-row-group;
+        }
+    </style>
+
+
+
+    <div class="divTable unstyledTable">
+        <div class="divTableHeading">
+            <div class="divTableRow">
+                <div class="divTableHead">Create Primitive</div>
+                <div class="divTableHead">&nbsp;</div>
+            </div>
+        </div>
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell">Name</div>
+                <div class="divTableCell"><input type="text" id="nameInput" /></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">X</div>
+                <div class="divTableCell"><input type="text" id="XInput" /></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Y</div>
+                <div class="divTableCell"><input type="text" id="YInput" /></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Z</div>
+                <div class="divTableCell"><input type="text" id="ZInput" /></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">
+                    <table class="tg">
+                        <tr>
+                            <th class="tg-t0np"><span style="font-weight:bold">Cube</span></th>
+                            <th class="tg-t0np"><span style="font-weight:bold">Cylinder</span></th>
+                            <th class="tg-t0np"><span style="font-weight:bold">Sphere</span></th>
+                            <th class="tg-t0np"><span style="font-weight:bold">Capsule</span></th>
+                            <th class="tg-t0np"><span style="font-weight:bold">Plane</span></th>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"><img src="images/cube.jpg" alt="cube"></td>
+                            <td class="tg-0lax"><img src="images/Cylinder.jpg" alt="cylinder"></td>
+                            <td class="tg-0lax"><img src="images/sphere.jpg" alt="sphere"></td>
+                            <td class="tg-0lax"><img src="images/Capsule.jpg" alt="capsule"></td>
+                            <td class="tg-0lax"><img src="images/plane.jpg" alt="plane"></td>
+                        </tr>
+                        <tr>
+                            <td class="check"><input type="radio" value="cube" name="shape"></td>
+                            <td class="check"><input type="radio" value="cylinder" name="shape"></td>
+                            <td class="check"><input type="radio" value="sphere" name="shape"></td>
+                            <td class="check"><input type="radio" value="capsule" name="shape"></td>
+                            <td class="check"><input type="radio" value="plane" name="shape"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell"> <input type="button" id="sendButton" value="Send Message" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- DivTable.com -->
+
+    
+    <div class="divTable unstyledTable">
+        <div class="divTableHeading">
+            <div class="divTableRow">
+                <div class="divTableHead">Controls</div>
+                <div class="divTableHead"></div>
+            </div>
+        </div>
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell">Enable Gravity</div>
+                <div class="divTableCell"><input type="checkbox" id="gravity"></div>
+            </div>
+            <div class="divTableRow">
+
+                <div class="divTableCell"> <input type="button" id="saveButton" value="Save Scene" /></div>
+                <div class="divTableCell" style="opacity: 0" id="msg">Done &#10004;</div>
+            </div>
+            <div class="divTableRow">
+
+                <div class="divTableCell"> <input type="file" id="sceneButton" name="file" accept="text/*"></div>
+               
+            </div>
+
+          
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/chat.js"></script>
+
+
